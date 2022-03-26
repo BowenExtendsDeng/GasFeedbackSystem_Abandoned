@@ -4,8 +4,7 @@
 #include "dao_reactionstatemapper.h"
 #include "service_defaultservice.h"
 
-class ServiceFactory
-{
+class ServiceFactory {
 private:
 
     const static int DEFAULT_SERVICE = 0;

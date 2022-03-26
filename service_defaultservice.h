@@ -2,14 +2,22 @@
 #define SERVICE_DEFAULTSERVICE_H
 
 #include "dao_reactionstatemapper.h"
+#include "service_servicemodel.h"
 
-class DefaultService
-{
+class DefaultService : ServiceModel{
 private:
 
+    ReactionStateMapper rsmp;
+
 public:
+
     DefaultService();
 
+    bool recordData(ReactionState statusData);
+
+    void trainDataSet();
+
+    void setupView();
 
 };
 
