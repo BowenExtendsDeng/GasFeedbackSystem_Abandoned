@@ -2,17 +2,18 @@
 #define SERVICE_SERVICEMODEL_H
 
 #include <QString>
+#include "pojo_reactionstate.h"
 
 class ServiceModel
 {
 public:
-    ServiceModel();
+    virtual void recordData(ReactionState statusData) = 0;
 
-    virtual bool recordData(QString sqlCmd);
+    virtual void trainDataSet() = 0;
 
-    virtual void trainDataSet();
+    virtual void setupView() = 0;
 
-    virtual void setupView();
+    virtual void endowFeedback() = 0;
 };
 
 #endif // SERVICE_SERVICEMODEL_H

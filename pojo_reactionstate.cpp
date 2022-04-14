@@ -1,6 +1,7 @@
 #include "pojo_reactionstate.h"
 
-ReactionState::ReactionState(QString newReactanrName, double newReactantConcentration, double newRelativeContent){
+ReactionState::ReactionState(QString newReactanrName, double newReactantConcentration,
+                             double newRelativeContent){
    this->reactantName = newReactanrName;
    this->reactantConcentration = newReactantConcentration;
    this->relativeContent = newRelativeContent;

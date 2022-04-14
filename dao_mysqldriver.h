@@ -4,9 +4,11 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QDebug>
+#include <QFile>
 
 class MysqlDriver{
 private:
+
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     QSqlQuery query;
 

@@ -17,7 +17,7 @@ public:
 
     ReactionState(){}
 
-    ReactionState(QString reactanrName, double reactantConcentration,
+    explicit ReactionState(QString reactanrName, double reactantConcentration,
                   double relativeContent);
 
     QString getReactantName();

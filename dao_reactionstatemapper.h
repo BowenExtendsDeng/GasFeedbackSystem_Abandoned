@@ -12,6 +12,7 @@ private:
     MysqlDriver driver;
 public:
     ReactionStateMapper();
+
     QVector<QString> selectAllReactantName();
 
     QVector<ReactionState> selectAll();

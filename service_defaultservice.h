@@ -4,7 +4,7 @@
 #include "dao_reactionstatemapper.h"
 #include "service_servicemodel.h"
 
-class DefaultService : ServiceModel{
+class DefaultService : public ServiceModel{
 private:
 
     ReactionStateMapper rsmp;
@@ -13,11 +13,13 @@ public:
 
     DefaultService();
 
-    bool recordData(ReactionState statusData);
+    void recordData(ReactionState statusData);
 
     void trainDataSet();
 
     void setupView();
+
+    void endowFeedback();
 
 };
 

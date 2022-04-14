@@ -2,6 +2,7 @@
 #define CONTROLLER_DATASENDER_H
 
 #include <QtNetwork/QTcpSocket>
+#include <QFile>
 
 class DataSender:QObject{
 private:
@@ -12,7 +13,7 @@ public:
 
     DataSender();
 
-    void writeReactionData();
+    void sendFeedback(QString command);
 
     void interpretMessage();
 

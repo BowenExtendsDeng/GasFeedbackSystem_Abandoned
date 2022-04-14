@@ -1,21 +1,10 @@
-#include <QApplication>
-#include <QPushButton>
-#include <QDebug>
-#include "dao_reactionstatemapper.h"
+#include "service_servicefactory.h"
 
-int main(int argc, char *argv[]) {
+#include <torch/torch.h>
+#include <iostream>
+#include<memory>
 
-    ReactionStateMapper rsmp;
-    QVector<ReactionState> names = rsmp.selectAll();
-    QVector<ReactionState>::iterator i = names.begin();
-    while (i != names.end()) {
-        ReactionState temp = *i;
-        qDebug() << temp.getReactantName() << temp.getReactantConcentration() << temp.getRelativeContent();
-        i++;
-    }
-    QApplication a(argc, argv);
-    QPushButton button("Hello world!", nullptr);
-    button.resize(200, 100);
-    button.show();
-    return QApplication::exec();
+int main(){
+    torch::Tensor tensor = torch::eye(3);
+    std::cout << tensor << std::endl;
 }
